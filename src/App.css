@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap');
+* { box-sizing: border-box; }
+::-webkit-scrollbar { width: 9px; height: 9px; }
+::-webkit-scrollbar-thumb { background: #d8d2c5; border-radius: 9px; border: 2px solid #F4F2ED; }
+.tnum { font-variant-numeric: tabular-nums; }
+.navbtn:hover { background: rgba(255,255,255,0.05); color: #fff; }
+.icobtn:hover { background: #F4F2ED; }
+.card { transition: box-shadow .18s, transform .18s, border-color .18s; }
+.card:hover { box-shadow: 0 10px 26px -16px rgba(11,27,43,0.28); }
+.addcard:hover { border-color: #16A34A; background: #FCFBF8; }
+.txnrow:hover { background: #FAF8F3; }
+.cta:hover { filter: brightness(1.07); }
+.link:hover { opacity: .75; }
+.railcard:hover { transform: translateY(-10px); }
+.livedot { width: 6px; height: 6px; border-radius: 6px; background: #16A34A; display: inline-block; animation: pulse 1.6s infinite; }
+@keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: .35; } }
+.seg { animation: draw .8s ease forwards; opacity: 0; }
+@keyframes draw { to { opacity: 1; } }
+.grow { animation: grow .9s cubic-bezier(.2,.7,.2,1); }
+@keyframes grow { from { width: 0 !important; } }
+.spin { width: 12px; height: 12px; border: 2px solid rgba(255,255,255,.4); border-top-color:#fff; border-radius: 50%; animation: sp .7s linear infinite; }
+@keyframes sp { to { transform: rotate(360deg); } }
+.modal { animation: pop .22s cubic-bezier(.2,.8,.2,1); }
+@keyframes pop { from { transform: scale(.94); opacity: 0; } }
+input::placeholder { color: #9AA7BC; }
+@media (max-width: 920px) {
+  aside { display: none; }
+  .insGrid, [style*="repeat(3, 1fr)"] { grid-template-columns: 1fr !important; }
+}
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }

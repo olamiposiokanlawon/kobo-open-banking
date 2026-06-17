@@ -1,0 +1,45 @@
+html, body, #root {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* { box-sizing: border-box; }
+
+.tabular-nums { font-variant-numeric: tabular-nums; }
+
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #d8d2c4; border-radius: 8px; border: 2px solid #F8F6F1; }
+::-webkit-scrollbar-thumb:hover { background: #c0bab0; }
+
+input::placeholder { color: #9AA7BC; }
+
+.live-pulse-dot {
+  width: 6px; height: 6px; border-radius: 6px;
+  background: #16A34A; display: inline-block;
+  animation: livePulse 1.8s ease-in-out infinite;
+}
+@keyframes livePulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.3; transform: scale(0.85); }
+}
+
+.bar-grow {
+  animation: barGrow 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+@keyframes barGrow { from { width: 0 !important; } }
+
+@media (max-width: 960px) {
+  aside { display: none !important; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
